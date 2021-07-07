@@ -67,11 +67,11 @@ do {
 let { x, y } = exit;
 let direction;
 if (x === 0) {
-  direction = "right";
+  direction = "left";
   x++;
 }
 if (x === mazeColumns - 1) {
-  direction = "left";
+  direction = "right";
   x--;
 }
 if (y === 0) {
@@ -92,7 +92,7 @@ while (stepBack >= 0) {
       break;
     case maze[y][x + 1]:
       x++;
-      direction = "right";
+      direction = "left";
       break;
     case maze[y + 1][x]:
       y++;
@@ -100,7 +100,7 @@ while (stepBack >= 0) {
       break;
     case maze[y][x - 1]:
       x--;
-      direction = "left";
+      direction = "right";
       break;
     default:
       break;
